@@ -1,0 +1,14 @@
+{% include 'tasks/style.html' %}
+
+<div class="center-column">
+
+  <p>Are your sure you want to delete "{{ task }}"</p>
+
+
+
+  <form class="" action="" method="POST">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" name="Confirm" value="Delete Task">
+  </form>
+  <a class="btn btn-sm btn-warning" href="{% url 'index' %}">Cancel</a>
+</div>
